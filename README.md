@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Lab Exercise 10 — React Redux & JWT  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔍 Overview  
+This lab demonstrates the key concepts of **Redux** and **JWT (JSON Web Token)** using a simple React application.
 
-## Available Scripts
+The application includes:
+- A **Redux Counter** (State, Store, Reducer, Actions, Dispatch)
+- A **JWT Login Simulation** (Fake token stored in Redux)
+- A **Clean Folder Structure**
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📦 Technologies Used  
+| Technology | Purpose |
+|------------|----------------------|
+| React      | Frontend library     |
+| Redux Toolkit | State management  |
+| JWT (simulated) | Authentication concept |
+| JavaScript | Logic & components   |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧠 What is Redux?  
+Redux is a **state management library** used to control and share data across the application.  
+It follows **three core principles**:
 
-### `npm test`
+1. **State** → Data (like `count`, `token`)  
+2. **Actions** → What should change  
+3. **Reducer** → Applies the change  
+4. **Dispatch** → Sends the action  
+5. **Store** → Holds all state in one place  
+6. **Subscribe** → UI automatically updates when state changes  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🔐 What is JWT (JSON Web Token)?  
+JWT is a way to represent **authentication**.  
+In this demo, we simulate JWT by storing a **fake token** in Redux — no backend required.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Folder Structure  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+src/
+├─ components/
+│ ├─ Counter.js ← Redux counter UI
+│ ├─ Login.js ← JWT simulation with Redux
+├─ redux/
+│ ├─ store.js ← Redux store setup
+│ ├─ counterSlice.js ← Redux slice for counter
+│ ├─ authSlice.js ← Redux slice for JWT
+├─ App.js ← Main component
+└─ index.js ← Connect Redux to React
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ▶️ How to Run the App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install
+npm start
